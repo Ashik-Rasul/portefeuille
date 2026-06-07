@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashik Rasul | Cybersecurity Portfolio</title>
+  <meta name="description" content="Portfolio of Ashik Rasul — cybersecurity enthusiast, CTF player, and developer. Explore projects, writeups, and skills.">
+  <meta name="author" content="Ashik Rasul">
+  <meta name="keywords" content="cybersecurity, portfolio, CTF, hacker, security, Ashik Rasul, pen testing, writeups">
+  <meta property="og:title" content="Ashik Rasul | Cybersecurity Portfolio">
+  <meta property="og:description" content="Portfolio of Ashik Rasul — cybersecurity enthusiast, CTF player, and developer.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Scanline Overlay -->
+  <div class="scanline-overlay"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">ashik<span class="logo-accent">@</span>rasul</span>
+        <span class="logo-bracket">]</span>
+        <span class="logo-cursor">_</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#home" class="nav-link active" data-section="home">~/home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">~/about</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">~/skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">~/projects</a></li>
+        <li><a href="#ctf-writeups" class="nav-link" data-section="ctf-writeups">~/ctf_writeups</a></li>
+        <li><a href="#archives" class="nav-link" data-section="archives">~/archives</a></li>
+      </ul>
+      <div class="nav-social">
+        <a href="https://github.com/Ashik-Rasul" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ashik-rasul8ash0x" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ==================== HOME SECTION ==================== -->
+    <section id="home" class="section hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-terminal-tag">&lt;!-- initializing portfolio... --&gt;</div>
+          <p class="hero-prefix mono">// cybersecurity enthusiast | developer | CTF player</p>
+          <h1 class="hero-title">
+            <span class="hero-name-first">Ashik</span>
+            <span class="hero-name-last">Rasul</span>
+          </h1>
+          <p class="hero-alias mono">&gt; a.k.a <span class="accent">ash0x</span></p>
+          <p class="hero-description">
+            Cybersecurity enthusiast exploring the depths of digital security. 
+            Active CTF player with interests in penetration testing, reverse engineering, 
+            and digital forensics. Building skills one exploit at a time.
+          </p>
+          <div class="hero-stats mono">
+            <span class="stat-item"><span class="stat-label">STATUS:</span> <span class="stat-value active">ACTIVE</span></span>
+            <span class="stat-divider">|</span>
+            <span class="stat-item"><span class="stat-label">LOCATION:</span> <span class="stat-value">INDIA</span></span>
+            <span class="stat-divider">|</span>
+            <span class="stat-item"><span class="stat-label">MODE:</span> <span class="stat-value">OFFENSIVE + DEFENSIVE</span></span>
+          </div>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary mono">
+              <span class="btn-icon">&gt;</span> VIEW_PROJECTS
+            </a>
+            <a href="#about" class="btn btn-outline mono">
+              <span class="btn-icon">$</span> ABOUT_ME
+            </a>
+            <a href="https://github.com/Ashik-Rasul" target="_blank" rel="noopener noreferrer" class="btn btn-ghost mono">
+              GitHub <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-terminal">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title mono">bash — 80×24</span>
+            </div>
+            <div class="terminal-body mono" id="terminal-output">
+              <div class="terminal-line"><span class="term-user">ashik@portfolio</span>:<span class="term-path">~</span>$ <span class="term-cmd">whoami</span></div>
+              <div class="terminal-line output">Ashik Rasul</div>
+              <div class="terminal-line"><span class="term-user">ashik@portfolio</span>:<span class="term-path">~</span>$ <span class="term-cmd">cat status.txt</span></div>
+              <div class="terminal-line output">[+] Pursuing B.Tech CSE @ Sathyabama Institute</div>
+              <div class="terminal-line output">[+] CTF Player | Security Researcher</div>
+              <div class="terminal-line output">[+] Open to collaborate on security projects</div>
+              <div class="terminal-line"><span class="term-user">ashik@portfolio</span>:<span class="term-path">~</span>$ <span class="term-cmd">ls skills/</span></div>
+              <div class="terminal-line output">penetration_testing/  reverse_engineering/  web_security/</div>
+              <div class="terminal-line output">forensics/            networking/           scripting/</div>
+            </div>
+            <div class="terminal-input-area">
+              <span class="term-user">ashik@portfolio</span>:<span class="term-path">~</span>$ 
+              <input type="text" id="terminal-input" class="terminal-input mono" autocomplete="off" spellcheck="false" placeholder="type 'help' for commands...">
+              <span class="cursor-blink">█</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span class="scroll-text mono">scroll down</span>
+        <div class="scroll-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag mono">&lt;section id="about"&gt;</span>
+          <h2 class="section-title">About <span class="accent">Me</span></h2>
+          <p class="section-subtitle mono">// whoami — getting to know the person behind the screen</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-info">
+            <div class="about-card glass-panel">
+              <div class="about-card-header mono">
+                <span class="card-icon">📋</span> personal_info.json
+              </div>
+              <div class="about-card-body mono">
+                <div class="json-content">
+                  <span class="json-brace">{</span>
+                  <div class="json-line"><span class="json-key">"name"</span>: <span class="json-value">"Ashik Rasul"</span>,</div>
+                  <div class="json-line"><span class="json-key">"alias"</span>: <span class="json-value">"ash0x"</span>,</div>
+                  <div class="json-line"><span class="json-key">"role"</span>: <span class="json-value">"Cybersecurity Enthusiast"</span>,</div>
+                  <div class="json-line"><span class="json-key">"location"</span>: <span class="json-value">"India"</span>,</div>
+                  <div class="json-line"><span class="json-key">"interests"</span>: [</div>
+                  <div class="json-line indent"><span class="json-value">"Penetration Testing"</span>,</div>
+                  <div class="json-line indent"><span class="json-value">"Reverse Engineering"</span>,</div>
+                  <div class="json-line indent"><span class="json-value">"Digital Forensics"</span>,</div>
+                  <div class="json-line indent"><span class="json-value">"CTF Competitions"</span></div>
+                  <div class="json-line">],</div>
+                  <div class="json-line"><span class="json-key">"open_to"</span>: <span class="json-value">"Collaboration"</span></div>
+                  <span class="json-brace">}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-education">
+            <h3 class="about-subtitle mono">&gt; education_log</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker completed"></div>
+                <div class="timeline-content glass-panel">
+                  <div class="timeline-status mono">
+                    <span class="status-badge completed">COMPLETED</span>
+                  </div>
+                  <h4 class="timeline-title">Gurukshetra Public School</h4>
+                  <p class="timeline-detail mono">// Secondary Education</p>
+                  <p class="timeline-description">Completed schooling with a strong foundation in science and technology.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker pursuing"></div>
+                <div class="timeline-content glass-panel">
+                  <div class="timeline-status mono">
+                    <span class="status-badge pursuing">PURSUING</span>
+                    <span class="pulse-dot"></span>
+                  </div>
+                  <h4 class="timeline-title">Sathyabama Institute of Science and Technology</h4>
+                  <p class="timeline-detail mono">// B.Tech CSE with Cybersecurity</p>
+                  <p class="timeline-description">Currently pursuing undergraduate degree with specialization in cybersecurity. Active in CTF competitions and security research.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag mono">&lt;section id="skills"&gt;</span>
+          <h2 class="section-title">Skill <span class="accent">Matrix</span></h2>
+          <p class="section-subtitle mono">// cat /etc/skills — technologies and tools I work with</p>
+        </div>
+        <div class="skills-grid">
+          <!-- Offensive Security -->
+          <div class="skill-category glass-panel" data-category="offensive">
+            <div class="skill-category-header">
+              <div class="skill-icon">⚔️</div>
+              <h3 class="skill-category-title mono">OFFENSIVE_SECURITY</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Burp Suite</span>
+              <span class="skill-tag">Nmap</span>
+              <span class="skill-tag">sqlmap</span>
+            </div>
+          </div>
+          <!-- Defensive Security -->
+          <div class="skill-category glass-panel" data-category="defensive">
+            <div class="skill-category-header">
+              <div class="skill-icon">🛡️</div>
+              <h3 class="skill-category-title mono">DEFENSIVE_SECURITY</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Wireshark</span>
+              <span class="skill-tag">Snort</span>
+            </div>
+          </div>
+          <!-- Programming -->
+          <div class="skill-category glass-panel" data-category="programming">
+            <div class="skill-category-header">
+              <div class="skill-icon">💻</div>
+              <h3 class="skill-category-title mono">PROGRAMMING</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Bash</span>
+              <span class="skill-tag">Powershell</span>
+            </div>
+          </div>
+          <!-- Tools & Platforms -->
+          <div class="skill-category glass-panel" data-category="tools">
+            <div class="skill-category-header">
+              <div class="skill-icon">🔧</div>
+              <h3 class="skill-category-title mono">TOOLS_&amp;_PLATFORMS</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Kali Linux</span>
+              <span class="skill-tag">VirtualBox</span>
+              <span class="skill-tag">VS Code</span>
+            </div>
+          </div>
+          <!-- Networking -->
+          <div class="skill-category glass-panel" data-category="networking">
+            <div class="skill-category-header">
+              <div class="skill-icon">🌐</div>
+              <h3 class="skill-category-title mono">NETWORKING</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">TCP/IP</span>
+              <span class="skill-tag">DNS</span>
+              <span class="skill-tag">HTTP/HTTPS</span>
+              <span class="skill-tag">Firewalls</span>
+              <span class="skill-tag">VPN</span>
+              <span class="skill-tag">Subnetting</span>
+            </div>
+          </div>
+          <!-- Forensics -->
+          <div class="skill-category glass-panel" data-category="forensics">
+            <div class="skill-category-header">
+              <div class="skill-icon">🔍</div>
+              <h3 class="skill-category-title mono">FORENSICS</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Autopsy</span>
+              <span class="skill-tag">Steganography</span>
+              <span class="skill-tag">ExifTool</span>
+              <span class="skill-tag">CyberChef</span>
+              <span class="skill-tag">FTK Imager</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag mono">&lt;section id="projects"&gt;</span>
+          <h2 class="section-title">Projects <span class="accent">& Labs</span></h2>
+          <p class="section-subtitle mono">// ls ~/projects — hands-on work and security experiments</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card glass-panel">
+            <div class="project-card-header">
+              <span class="project-date mono">2025</span>
+              <span class="project-status mono active">ACTIVE</span>
+            </div>
+            <h3 class="project-title">Smart Log Analyzer Intrusion Detector</h3>
+            <p class="project-description">Analyzes system log files to detect suspicious activities such as failed login attempts and unauthorized access. It helps users identify possible security threats using basic rule-based detection techniques.</p>
+            <div class="project-tags">
+              <span class="project-tag">Security</span>
+              <span class="project-tag">Log Analysis</span>
+              <span class="project-tag">Detection</span>
+            </div>
+            <a href="https://github.com/Ashik-Rasul/Smart-Log-Analyzer-Intrusion-Detector" target="_blank" rel="noopener noreferrer" class="project-link mono">
+              Explore <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTF WRITEUPS SECTION ==================== -->
+    <section id="ctf-writeups" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag mono">&lt;section id="ctf-writeups"&gt;</span>
+          <h2 class="section-title">CTF <span class="accent">Writeups</span></h2>
+          <p class="section-subtitle mono">// cat /var/log/ctf — detailed walkthroughs of solved challenges</p>
+        </div>
+        <div class="writeups-grid">
+          <a href="#" class="writeup-card glass-panel">
+            <div class="writeup-meta mono">
+              <span class="writeup-date">2025</span>
+              <span class="writeup-difficulty easy">Easy</span>
+            </div>
+            <h3 class="writeup-title">Binary Exploitation 101</h3>
+            <p class="writeup-excerpt">Buffer overflow challenge — exploiting a vulnerable binary by overwriting the return address to redirect execution flow to a win() function.</p>
+            <div class="writeup-tags">
+              <span class="writeup-tag">picoCTF</span>
+              <span class="writeup-tag">Binary</span>
+              <span class="writeup-tag">Buffer Overflow</span>
+            </div>
+            <span class="writeup-read mono">Read writeup <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+          <a href="#" class="writeup-card glass-panel">
+            <div class="writeup-meta mono">
+              <span class="writeup-date">2025</span>
+              <span class="writeup-difficulty medium">Medium</span>
+            </div>
+            <h3 class="writeup-title">Web Exploitation — SQL Injection</h3>
+            <p class="writeup-excerpt">Bypassing authentication using SQL injection to extract sensitive data from a vulnerable web application's backend database.</p>
+            <div class="writeup-tags">
+              <span class="writeup-tag">CTF</span>
+              <span class="writeup-tag">Web</span>
+              <span class="writeup-tag">SQLi</span>
+            </div>
+            <span class="writeup-read mono">Read writeup <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+          <a href="#" class="writeup-card glass-panel">
+            <div class="writeup-meta mono">
+              <span class="writeup-date">2025</span>
+              <span class="writeup-difficulty hard">Hard</span>
+            </div>
+            <h3 class="writeup-title">Crypto Challenge — RSA Decryption</h3>
+            <p class="writeup-excerpt">RSA private key hidden in JPEG metadata as a hex comment. Extracted with ExifTool, decoded in CyberChef, then used OpenSSL to decrypt the flag.</p>
+            <div class="writeup-tags">
+              <span class="writeup-tag">Cryptography</span>
+              <span class="writeup-tag">RSA</span>
+              <span class="writeup-tag">Steganography</span>
+            </div>
+            <span class="writeup-read mono">Read writeup <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+          <a href="#" class="writeup-card glass-panel">
+            <div class="writeup-meta mono">
+              <span class="writeup-date">2024</span>
+              <span class="writeup-difficulty medium">Medium</span>
+            </div>
+            <h3 class="writeup-title">Forensics — Hidden in Plain Sight</h3>
+            <p class="writeup-excerpt">A .bin file containing only ones and zeros hides a flag image. Solved by piping the binary data through CyberChef's From Binary → Render Image recipe.</p>
+            <div class="writeup-tags">
+              <span class="writeup-tag">Forensics</span>
+              <span class="writeup-tag">CyberChef</span>
+              <span class="writeup-tag">Steganography</span>
+            </div>
+            <span class="writeup-read mono">Read writeup <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+          <a href="#" class="writeup-card glass-panel">
+            <div class="writeup-meta mono">
+              <span class="writeup-date">2024</span>
+              <span class="writeup-difficulty easy">Easy</span>
+            </div>
+            <h3 class="writeup-title">Privilege Escalation — Sudo Misconfig</h3>
+            <p class="writeup-excerpt">SSH access with sudo rights to run a text editor as root. Escalated privileges by spawning a shell through the editor's eval functionality.</p>
+            <div class="writeup-tags">
+              <span class="writeup-tag">Linux</span>
+              <span class="writeup-tag">PrivEsc</span>
+              <span class="writeup-tag">sudo</span>
+            </div>
+            <span class="writeup-read mono">Read writeup <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+          <a href="#" class="writeup-card glass-panel">
+            <div class="writeup-meta mono">
+              <span class="writeup-date">2024</span>
+              <span class="writeup-difficulty hard">Hard</span>
+            </div>
+            <h3 class="writeup-title">Reverse Engineering — Packed Binary</h3>
+            <p class="writeup-excerpt">Reverse engineering a UPX-packed binary using Ghidra. Identified the packing, unpacked it, then analyzed the logic to extract the embedded flag.</p>
+            <div class="writeup-tags">
+              <span class="writeup-tag">RevEng</span>
+              <span class="writeup-tag">Ghidra</span>
+              <span class="writeup-tag">UPX</span>
+            </div>
+            <span class="writeup-read mono">Read writeup <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ARCHIVES SECTION ==================== -->
+    <section id="archives" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag mono">&lt;section id="archives"&gt;</span>
+          <h2 class="section-title">Archives</h2>
+          <p class="section-subtitle mono">// find / -name "*.log" — chronological timeline of all activity</p>
+        </div>
+        <div class="archives-container">
+          <!-- 2025 -->
+          <div class="archive-year">
+            <h3 class="archive-year-title mono">
+              <span class="archive-year-num">2025</span>
+              <span class="archive-year-line"></span>
+              <span class="archive-year-count mono">6 entries</span>
+            </h3>
+            <div class="archive-entries">
+              <div class="archive-entry glass-panel">
+                <span class="archive-date mono">Jun 2025</span>
+                <div class="archive-info">
+                  <span class="archive-type mono writeup">WRITEUP</span>
+                  <h4 class="archive-title">Binary Exploitation 101 — picoCTF</h4>
+                </div>
+              </div>
+              <div class="archive-entry glass-panel">
+                <span class="archive-date mono">May 2025</span>
+                <div class="archive-info">
+                  <span class="archive-type mono writeup">WRITEUP</span>
+                  <h4 class="archive-title">Web Exploitation — SQL Injection Challenge</h4>
+                </div>
+              </div>
+              <div class="archive-entry glass-panel">
+                <span class="archive-date mono">Apr 2025</span>
+                <div class="archive-info">
+                  <span class="archive-type mono project">PROJECT</span>
+                  <h4 class="archive-title">Security Toolkit — Python Automation Scripts</h4>
+                </div>
+              </div>
+              <div class="archive-entry glass-panel">
+                <span class="archive-date mono">Mar 2025</span>
+                <div class="archive-info">
+                  <span class="archive-type mono writeup">WRITEUP</span>
+                  <h4 class="archive-title">Crypto Challenge — RSA Decryption</h4>
+                </div>
+              </div>
+              <div class="archive-entry glass-panel">
+                <span class="archive-date mono">Feb 2025</span>
+                <div class="archive-info">
+                  <span class="archive-type mono project">PROJECT</span>
+                  <h4 class="archive-title">Network Scanner — Python & Scapy</h4>
+                </div>
+              </div>
+              <div class="archive-entry glass-panel">
+                <span class="archive-date mono">Jan 2025</span>
+                <div class="archive-info">
+                  <span class="archive-type mono event">EVENT</span>
+                  <h4 class="archive-title">Started B.Tech at Sathyabama Institute</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2024 -->
+          <div class="archive-year">
+            <h3 class="archive-year-title mono">
+              <span class="archive-year-num">2024</span>
+              <span class="archive-year-line"></span>
+              <span class="archive-year-count mono">5 entries</span>
+            </h3>
+            <div class="archive-entries">
+              <div class="archive-entry glass-panel">
+                <span class="archive-date mono">Nov 2024</span>
+                <div class="archive-info">
+                  <span class="archive-type mono writeup">WRITEUP</span>
+                  <h4 class="archive-title">Forensics — Hidden in Plain Sight</h4>
+                </div>
+              </div>
+              <div class="archive-entry glass-panel">
+                <span class="archive-date mono">Sep 2024</span>
+                <div class="archive-info">
+                  <span class="archive-type mono project">PROJECT</span>
+                  <h4 class="archive-title">CTF Challenge Platform — Docker</h4>
+                </div>
+              </div>
+              <div class="archive-entry glass-panel">
+                <span class="archive-date mono">Jul 2024</span>
+                <div class="archive-info">
+                  <span class="archive-type mono writeup">WRITEUP</span>
+                  <h4 class="archive-title">Privilege Escalation — Sudo Misconfig</h4>
+                </div>
+              </div>
+              <div class="archive-entry glass-panel">
+                <span class="archive-date mono">May 2024</span>
+                <div class="archive-info">
+                  <span class="archive-type mono project">PROJECT</span>
+                  <h4 class="archive-title">Password Cracker — Multi-threaded</h4>
+                </div>
+              </div>
+              <div class="archive-entry glass-panel">
+                <span class="archive-date mono">Mar 2024</span>
+                <div class="archive-info">
+                  <span class="archive-type mono event">EVENT</span>
+                  <h4 class="archive-title">Completed Schooling — Gurukshetra Public School</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <div class="footer-logo mono">
+            <span class="logo-bracket">[</span>ashik<span class="accent">@</span>rasul<span class="logo-bracket">]</span>
+          </div>
+          <p class="footer-tagline">Cybersecurity Enthusiast & CTF Player</p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading mono">&gt; navigation</h4>
+          <ul>
+            <li><a href="#home">~/home</a></li>
+            <li><a href="#about">~/about</a></li>
+            <li><a href="#skills">~/skills</a></li>
+            <li><a href="#projects">~/projects</a></li>
+            <li><a href="#ctf-writeups">~/ctf_writeups</a></li>
+            <li><a href="#archives">~/archives</a></li>
+          </ul>
+        </div>
+        <div class="footer-social-section">
+          <h4 class="footer-heading mono">&gt; connect</h4>
+          <div class="footer-social-links">
+            <a href="https://github.com/Ashik-Rasul" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ashik-rasul8ash0x" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom mono">
+        <p>&copy; <span id="current-year">2025</span> Ashik Rasul. All rights reserved.</p>
+        <p class="footer-made">Built with <span class="accent">&lt;/&gt;</span> and ☕</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
